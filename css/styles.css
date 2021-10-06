@@ -292,7 +292,7 @@ button {
 }
 
 .feature {
-  flex-basis: calc((100% - 10px) / 5);
+  flex-basis: calc((100% - 120px) / 4);
   margin-left: 30px;
   margin-top: 30px;
   border: 1px;
@@ -496,13 +496,13 @@ button {
   flex-wrap: wrap;
   list-style: none;
   margin-right: -30px;
-  margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .client-a-border {
   flex-basis: calc((100% - 180px) / 6);
   margin-right: 30px;
-  margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 4px;
   height: 92px;
   border: 1px solid var(--icon-color-1);
@@ -543,8 +543,6 @@ button {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  flex-basis: calc((100% - 90px) / 5);
-  margin-left: 8px;
   background-color: var(--bg-team-color);
   border-radius: 4px;
   padding: 6px 22px;
@@ -553,12 +551,15 @@ button {
 
 .button-box-portfolio {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   justify-content: center;
-  margin-left: -8px;
   margin-bottom: 50px;
 }
+
+.button-portfolio {
+  margin-left: 8px;
+}
+
 
 .button2:hover,
 .button2:focus {
@@ -643,13 +644,13 @@ button {
   padding: 63px 24px;
 }
 
-.box-overlay:hover .overlay,
-.box-overlay:focus .overlay {
+.box-overlay:focus .overlay,
+.box-overlay:hover .overlay {
   transform: translatey(0);
 }
 
-.project:hover .overlay,
-.project:focus .overlay {
+.project:focus .overlay,
+.project:hover .overlay {
   transform: translatey(0);
 }
 
@@ -668,7 +669,10 @@ footer {
 
 .footer-bot-container {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-right: -30px;
+  margin-bottom: -30px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -684,6 +688,12 @@ footer {
   justify-content: flex-start;
   text-decoration: none;
   margin-bottom: 20px;
+}
+
+.footer-logo-adre {
+  flex-basis: calc((50% - 30px) / 2);
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .footer-bot-adre {
@@ -732,8 +742,10 @@ footer {
   flex-direction: column;
 }
 
-.fopter-social {
-  margin-left: 70px;
+.footer-social {
+  flex-basis: calc((50% - 30px) / 2);
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .footer-social-head {
@@ -747,7 +759,7 @@ footer {
 
 .footer-social-position {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .footer-social-border {
