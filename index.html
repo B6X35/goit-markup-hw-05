@@ -17,39 +17,37 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="container header-bot-line">
-        <div class="header-top-container">
-          <a href="index.html" class="header-top-logo"
-            ><span class="logo1">Web</span><span class="logo2">Studio</span></a
+    <header class="header-bot-line">
+      <div class="container header-top-container">
+      <a href="index.html" class="header-top-logo"
+          ><span class="logo1">Web</span><span class="logo2">Studio</span></a
+        >
+        <nav class="header-top-nav">
+          <ul class="menu-box center">
+            <li class="menu-pad">
+              <a href="index.html" class="menu current">Студия</a>
+            </li>
+            <li class="menu-pad">
+              <a href="portfolio.html" class="menu">Портфолио</a>
+            </li>
+            <li class="menu-pad">
+              <a href="3.html" class="menu">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-con">
+          <a href=" " class="contact1 contact-pos">
+            <svg class="mail-icon" width="21px" height="16px">
+              <use href="./images/sprite.svg#envelope"></use>
+            </svg>
+            info@devstudio.com</a
           >
-          <nav class="header-top-nav">
-            <ul class="menu-box center">
-              <li class="menu-pad">
-                <a href="index.html" class="menu2">Студия</a>
-              </li>
-              <li class="menu-pad">
-                <a href="portfolio.html" class="menu1">Портфолио</a>
-              </li>
-              <li>
-                <a href="3.html" class="menu1">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header-con">
-            <a href=" " class="contact1 contact-pos">
-              <svg class="mail-icon" width="21px" height="16px">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-            <a href=" " class="contact1">
-              <svg class="mail-icon" width="16px" height="24px">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </div>
+          <a href=" " class="contact1">
+            <svg class="mail-icon" width="16px" height="24px">
+              <use href="./images/sprite.svg#smartphone"></use>
+            </svg>
+            +38 096 111 11 11</a
+          >
         </div>
       </div>
     </header>
@@ -120,7 +118,7 @@
       </section>
       <section class="section subject-section">
         <div class="container">
-          <h2 class="subject">Чем мы занимаемся</h2>
+          <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="subject-box center">
             <li class="subject-img">
               <img
@@ -157,7 +155,7 @@
       </section>
       <section class="section team-bg">
         <div class="container">
-          <h2 class="title-team">Наша команда</h2>
+          <h2 class="section-title">Наша команда</h2>
           <ul class="team-box">
             <li class="team">
               <img
@@ -332,71 +330,47 @@
       </section>
       <section class="section">
         <div class="container client-conteiner">
-          <h2 class="client-title">Постоянные клиенты</h2>
+          <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="client-a-position">
             <li class="client-a-border">
               <a href="" class="client-a">
                 <svg class="client-a-icon">
-                  <use
-                    href="./images/sprite.svg#ya"
-                    width="106px"
-                    height="60px"
-                  ></use>
+                  <use href="./images/sprite.svg#ya"></use>
                 </svg>
               </a>
             </li>
             <li class="client-a-border">
               <a href="" class="client-a">
                 <svg class="client-a-icon">
-                  <use
-                    href="./images/sprite.svg#tagline-here"
-                    width="106px"
-                    height="60px"
-                  ></use>
+                  <use href="./images/sprite.svg#tagline-here"></use>
                 </svg>
               </a>
             </li>
             <li class="client-a-border">
               <a href="" class="client-a">
                 <svg class="client-a-icon">
-                  <use
-                    href="./images/sprite.svg#company"
-                    width="106px"
-                    height="60px"
-                  ></use>
+                  <use href="./images/sprite.svg#company"></use>
                 </svg>
               </a>
             </li>
             <li class="client-a-border">
               <a href="" class="client-a">
                 <svg class="client-a-icon">
-                  <use
-                    href="./images/sprite.svg#foster"
-                    width="106px"
-                    height="60px"
-                  ></use>
+                  <use href="./images/sprite.svg#foster"></use>
                 </svg>
               </a>
             </li>
             <li class="client-a-border">
               <a href="" class="client-a">
                 <svg class="client-a-icon">
-                  <use
-                    href="./images/sprite.svg#brand"
-                    width="106px"
-                    height="60px"
-                  ></use>
+                  <use href="./images/sprite.svg#brand"></use>
                 </svg>
               </a>
             </li>
             <li class="client-a-border">
               <a href="" class="client-a">
                 <svg class="client-a-icon">
-                  <use
-                    href="./images/sprite.svg#tagline"
-                    width="106px"
-                    height="60px"
-                  ></use>
+                  <use href="./images/sprite.svg#tagline"></use>
                 </svg>
               </a>
             </li>
@@ -406,8 +380,8 @@
     </main>
     <footer>
       <div class="container">
-        <div class="footer-bot-container">
-          <div class="footer-logo-adre">
+        <div class="footer-elements-pos">
+          <div class="footer-bot-container">
             <a href="index.html" class="footer-bot-logo"
               ><span class="logo3">Web</span
               ><span class="logo4">Studio</span></a
@@ -451,8 +425,8 @@
               </li>
             </ul>
           </div>
-        </div>
       </div>
+        </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -463,7 +437,6 @@
         </button>
       </div>
     </div>
-
     <script src="./js/modal.js"></script>
   </body>
 </html>

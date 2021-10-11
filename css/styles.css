@@ -26,11 +26,6 @@
   fill: var(--active-1-color);
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 body {
   font-family: "Roboto";
   color: var(--normal-color);
@@ -65,34 +60,41 @@ img {
   height: auto;
 }
 
+
+button {
+  cursor: pointer;
+  outline: 0;
+  border-radius: 4px;
+  border-width: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 /* ===================END GLOBAL============================================================================ */
 /* ===================START HEADER============================================================================ */
-
-.header-bot-line {
-  border-bottom: 1px solid var(--top-line-color);
-}
-
-.logo1 {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  color: var(--active-1-color);
-  display: inline-block;
-}
-
-.logo2 {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  color: var(--background-color);
-  display: inline-block;
-}
-
-.logo2:visited {
-  color: var(--background-color);
-}
 
 header {
   font-weight: 500;
@@ -128,10 +130,37 @@ header {
   margin-left: auto;
 }
 
+.header-bot-line {
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--top-line-color);
+  width: 100%;
+}
 .logo-box {
   border: 2px;
-  width: 145;
-  height: 31;
+  width: 145px;
+  height: 31px;
+}
+
+.logo1 {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--active-1-color);
+  display: inline-block;
+}
+
+.logo2 {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--background-color);
+  display: inline-block;
+}
+
+.logo2:visited {
+  color: var(--background-color);
 }
 
 .menu-box {
@@ -145,44 +174,38 @@ header {
   margin-right: 50px;
 }
 
-.menu1 {
+.menu-pad:last-child {
+  margin-right: 0px;
+}
+
+.menu {
+  position: relative;
   text-decoration: none;
   color: var(--normal-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu2 {
+.current {
   text-decoration: none;
   color: var(--active-1-color);
 }
 
-.menu2::after {
+
+.current::after {
   display: block;
   content: "";
   position: absolute;
   margin-top: 28px;
-  width: 48px;
+  width: 100%;
   height: 4px;
   border-radius: 2px;
   flex-shrink: 0;
   background-color: var(--active-1-color);
 }
 
-.menu3 {
-  text-decoration: none;
+.menu:hover,
+.menu:focus {
   color: var(--active-1-color);
-}
-
-.menu3::after {
-  display: block;
-  content: "";
-  position: absolute;
-  margin-top: 28px;
-  width: 78px;
-  height: 4px;
-  border-radius: 2px;
-  flex-shrink: 0;
-  background-color: var(--active-1-color);
 }
 
 .mail-icon {
@@ -219,32 +242,27 @@ header {
   fill: var(--active-1-color);
 }
 
-.menu1:hover,
-.menu1:focus {
-  color: var(--active-1-color);
-}
-
 /* ===================END HEADER============================================================================ */
 /* ===================START TITLE============================================================================ */
 
-.title-bg {
-  background-color: var(--background-color);
-  background-image: linear-gradient(
-      rgba(25, 28, 38, 0.2),
-      rgba(25, 28, 38, 0.2)
-    ),
-    url("../images/title-bg.jpg");
-  background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
+.title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--white-text-color);
+  padding-bottom: 30px;
+  text-transform: uppercase;
 }
 
-button {
-  cursor: pointer;
-  outline: 0;
-  border-radius: 4px;
-  border-width: 0;
+.title-box {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 .button1 {
   font-weight: 700;
   font-size: 16px;
@@ -262,22 +280,17 @@ button {
   outline: 0;
 }
 
-.title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.5;
-  text-align: center;
-  color: var(--white-text-color);
-  margin-bottom: 30px;
-  text-transform: none;
-}
-
-.title-box {
-  list-style: none;
-  text-align: center;
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
+.title-bg {
+  background-color: var(--background-color);
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url("../images/title-bg.jpg");
+  background-size: cover;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 /* ===================END TITLE============================================================================ */
@@ -292,14 +305,34 @@ button {
 }
 
 .feature {
-  flex-basis: calc((100% - 120px) / 4);
+  flex-basis: calc((100% - 10px) / 5);
   margin-left: 30px;
   margin-top: 30px;
   border: 1px;
 }
 
+.feature-section {
+  padding-bottom: 47px;
+}
+
+.feature-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background: var(--bg-team-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .feature-title {
-  text-transform: initial;
+  text-transform: uppercase;
   border: 1px;
   font-weight: 700;
   font-size: 14px;
@@ -312,26 +345,6 @@ button {
   font-size: 14px;
   line-height: 1.7;
   color: var(--description-color);
-}
-
-.feature-icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 120px;
-  background: var(--bg-team-color);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-
-.feature-icon {
-  width: 70;
-  height: 70px;
-}
-
-.feature-section {
-  padding-bottom: 47px;
 }
 
 /* ===================END FEATURE============================================================================ */
@@ -348,6 +361,7 @@ button {
 .subject-section {
   padding-top: 47px;
 }
+
 
 .subject-box {
   display: flex;
@@ -369,7 +383,6 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 70px;
   text-align: center;
   background-color: rgba(47, 48, 58, 0.8);
 }
@@ -379,13 +392,9 @@ button {
   font-size: 14px;
   line-height: 1.17;
   color: var(--white-text-color);
-  margin-top: 27px;
-  width: 205;
-  height: 16px;
-}
-
-.subject-size {
-  margin-right: 30px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  text-transform: uppercase;
 }
 
 /* ===================END IMG WORK============================================================================ */
@@ -397,10 +406,6 @@ button {
   line-height: 1.17;
   text-align: center;
   padding: 50px;
-}
-
-.team-bg {
-  background-color: var(--bg-team-color);
 }
 
 .team-box {
@@ -417,25 +422,6 @@ button {
   margin-top: 30px;
 }
 
-.team-title {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.team-text-position {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.team-subtitle {
-  font-size: 16px;
-  line-height: 1.2;
-  color: var(--description-color);
-}
-
 .team-box .team {
   display: block;
   border: 1px;
@@ -447,12 +433,6 @@ button {
   background-color: var(--white-text-color);
 }
 
-.team-a-position {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-}
-
 .team-a-border {
   display: flex;
   justify-content: center;
@@ -461,8 +441,15 @@ button {
   width: 44px;
   height: 44px;
   background-color: var(--white-text-color);
-  margin-right: 10px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-a-icon-pos {
+  margin-right: 10px;
+}
+
+.team-a-icon-pos:last-child {
+  margin-right: 0px;
 }
 
 .team-a-icon {
@@ -471,12 +458,42 @@ button {
 
 .team-a-border:hover,
 .team-a-border:focus {
+  outline: none;
   background-color: var(--active-1-color);
 }
 
 .team-a-border:hover .team-a-icon,
 .team-a-border:focus .team-a-icon {
   fill: var(--white-text-color);
+}
+
+.team-text-position {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-a-position {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.team-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.team-subtitle {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--description-color);
+}
+
+.team-bg {
+  background-color: var(--bg-team-color);
 }
 
 /* ===================END TEAM============================================================================ */
@@ -496,13 +513,13 @@ button {
   flex-wrap: wrap;
   list-style: none;
   margin-right: -30px;
-  margin-bottom: -30px;
+  margin-top: -30px;
 }
 
 .client-a-border {
   flex-basis: calc((100% - 180px) / 6);
   margin-right: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   border-radius: 4px;
   height: 92px;
   border: 1px solid var(--icon-color-1);
@@ -527,14 +544,16 @@ button {
 }
 
 .client-a-border:hover,
-.client-a-border:focus {
+.client-a:focus {
+  outline: none;
   border: 1px solid var(--active-1-color);
 }
 
 .client-a-border:hover .client-a-icon,
-.client-a-border:focus .client-a-icon {
+.client-a:focus .client-a-icon {
   fill: var(--active-1-color);
 }
+
 
 /* ===================END CLIENTS============================================================================ */
 /* ===================START PORTFOLIO============================================================================ */
@@ -557,9 +576,12 @@ button {
 }
 
 .button-portfolio {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 
+.button-portfolio:last-child {
+  margin-right: 0px;
+}
 
 .button2:hover,
 .button2:focus {
@@ -581,12 +603,23 @@ button {
   flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project:hover {
+.project-a {
+  display: block;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.project-a:hover,
+.project-a:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project-a:focus {
+  outline: none;
+  border: 1px solid var(--active-1-color);
 }
 
 .border-text-project {
@@ -594,25 +627,7 @@ button {
   border-right: 1px var(--bg-card-port-color);
   border-bottom: 1px var(--bg-card-port-color);
   box-sizing: border-box;
-}
-
-.project-text-pos {
-  margin-bottom: 20px;
-  margin-left: 24px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
-
-.project-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-}
-
-.project-subtitle {
-  font-size: 16px;
-  line-height: 1.9;
-  color: var(--description-color);
+  padding: 20px 24px;
 }
 
 .box-overlay {
@@ -630,7 +645,7 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 294px;
+  height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translatey(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -644,15 +659,29 @@ button {
   padding: 63px 24px;
 }
 
-.box-overlay:focus .overlay,
-.box-overlay:hover .overlay {
+.box-overlay:hover .overlay,
+.box-overlay:focus .overlay {
   transform: translatey(0);
 }
 
-.project:focus .overlay,
-.project:hover .overlay {
+.project-a:hover .overlay,
+.project-a:focus .overlay {
   transform: translatey(0);
 }
+
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--normal-color);
+}
+
+.project-subtitle {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--description-color);
+}
+
 
 /* ===================END PORTFOLIO============================================================================ */
 /* ===================START FOOTER============================================================================ */
@@ -661,13 +690,10 @@ footer {
   font-size: 14px;
   line-height: 1.7;
   color: var(--white-text-color);
-  position: absolute;
   background: var(--background-color);
-  left: 0px;
-  right: 0px;
 }
 
-.footer-bot-container {
+.footer-elements-pos {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -677,30 +703,37 @@ footer {
   padding-bottom: 60px;
 }
 
+.footer-bot-container {
+  flex-basis: calc((50% - 45px) / 2);
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+.footer-social {
+  flex-basis: calc((50% - 45px) / 2);
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-bot-email {
+  flex-basis: calc(50% - 15px);
+}
+
 .footer-bot {
   position: relative;
   display: flex;
 }
 
 .footer-bot-logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: inline-flex;
   text-decoration: none;
   margin-bottom: 20px;
 }
 
-.footer-logo-adre {
-  flex-basis: calc((50% - 30px) / 2);
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.footer-bot-adre {
+.footer-social-position {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
-  text-decoration: none;
 }
 
 .logo3 {
@@ -737,29 +770,19 @@ footer {
 
 .address {
   font-style: normal;
-  display: flex;
+  display: inline-flex;
   justify-content: flex-start;
   flex-direction: column;
-}
-
-.footer-social {
-  flex-basis: calc((50% - 30px) / 2);
-  margin-right: 30px;
-  margin-bottom: 30px;
 }
 
 .footer-social-head {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
+  text-transform: uppercase;
   color: var(--white-text-color);
   margin-top: 12px;
   margin-bottom: 20px;
-}
-
-.footer-social-position {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .footer-social-border {
@@ -775,11 +798,12 @@ footer {
 }
 
 .footer-social-icon {
-  fill: var(--icon-color-1);
+  fill: var(--white-text-color);
 }
 
 .footer-social-border:hover,
 .footer-social-border:focus {
+  outline: none;
   background-color: var(--active-1-color);
 }
 
@@ -788,6 +812,70 @@ footer {
   fill: var(--white-text-color);
 }
 
+.footer-btn {
+  background-color: var(--active-1-color);
+}
+.footer-mail-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-btn-icon {
+  fill: var(--white-text-color);
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.footer-btn-span {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--white-text-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 28px;
+}
+
+.footer-email {
+  background-color: var(--background-color);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  width: 100%;
+  height: 100%;
+  padding: 15px 16px;
+  color: var(--white-text-color);
+}
+
+.footer-email:focus {
+  outline: none;
+  border-color: var(--active-1-color);
+}
+
+.footer-email:focus:not(:placeholder-shown):valid {
+  outline: none;
+  border-color: green;
+}
+
+.footer-email:focus:not(:placeholder-shown):invalid {
+  outline: none;
+  border-color: red;
+}
+
+.footer-submit {
+  display: flex;
+}
+
+.content {
+  flex-grow: 10;
+  margin-right: 12px;
+}
 /* ===================END FOOTER============================================================================ */
 
 .backdrop {
@@ -806,7 +894,6 @@ footer {
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
 }
 
 .modal {
@@ -816,7 +903,153 @@ footer {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 580px;
+  padding: 40px;
   background-color: #ffffff;
+}
+
+
+.modal-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-modal {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.17;
+  color: var(--normal-color);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal-form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  padding: 12px 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon-input {
+  position: absolute;
+  top: 75%;
+  transform: translateY(-75%);
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  fill: var(--description-color);
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--active-1-color);
+}
+
+.modal-form-input:focus + .modal-icon-input {
+  fill: var(--active-1-color);
+}
+
+.modal-form-input:focus:not(:placeholder-shown):valid {
+  outline: none;
+  border-color: green;
+}
+
+.modal-form-input:focus:not(:placeholder-shown):invalid {
+  outline: none;
+  border-color: red;
+}
+
+.modal-form-span {
+  color: var(--description-color);
+  position: relative;
+}
+
+.modal-form-span + .modal-form-span {
+  margin-top: 10px;
+}
+
+.modal-form-mes {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.modal-form-mes:focus {
+  outline: none;
+  border-color: var(--active-1-color);
+}
+
+.modal-checkbox {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 14px;
+}
+
+.modal-checkbox-text {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--description-color);
+}
+
+.modal-checkbox-text::before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  cursor: pointer;
+  border: 1px solid var(--normal-color);
+}
+
+.modal-checkbox-text-a {
+  display: inline;
+  height: 24px;
+  width: 400px;
+  color: var(--active-1-color);
+}
+
+.modal-checkbox-input {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.modal-icon-checkbox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 17px;
+  width: 11px;
+  height: 8px;
+  fill: var(--white-text-color);
+  cursor: pointer;
+}
+
+.modal-checkbox-input:checked + .modal-checkbox-text::before {
+  background-color: var(--active-1-color);
+  border: 1px solid var(--active-1-color);
+}
+
+.modal-checkbox-input:focus + .modal-checkbox-text::before {
+  outline: 1px solid var(--active-1-color);
+}
+
+.modal-checkbox-text-size{
+  font-size: 14px;
+  height: 24px;
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-top: 8px;
 }
 
 .close-btn {
@@ -833,4 +1066,24 @@ footer {
   background-color: transparent;
   cursor: pointer;
   padding: 0;
+}
+
+.modal-btn {
+  width: 200px;
+  padding: 10px 55px;
+  border-radius: 4px;
+  align-self: center;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  background-color: var(--active-1-color);
+  color: var(--white-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-btn:hover
+.modal-btn:focus {
+  background-color: var(--active-2-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
